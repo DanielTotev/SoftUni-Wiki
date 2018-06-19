@@ -1,0 +1,18 @@
+<h1>Welcome to SoftUni Wiki!</h1>
+<div class="spacer">
+    <h2>{{article.title}}
+        <div class="controls">
+            {{#if currentUser}}
+                {{#if hasEditRights}}
+                <a href="/article/edit/{{article._id}}">[edit]</a>
+                {{/if}}
+                <a href="/article/{{article._id}}/history">[history]</a>
+            {{/if}}
+        </div>
+    </h2>
+    <article>
+        {{#each contents}}
+            <p>{{this}}</p>
+        {{/each}}    
+    </article>
+</div>

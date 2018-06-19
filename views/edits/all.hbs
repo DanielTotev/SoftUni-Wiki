@@ -1,0 +1,15 @@
+<h1>Welcome to SoftUni Wiki!</h1>
+<section>
+    <h2>{{article.title}}</h2>
+    <div class="spacer">
+        <h3>Edit history</h3>
+        <ul>
+            {{#each edits}}
+            <li>
+                <a href="/edit/details/{{this._id}}">{{this.creationDate}}‎</a> by
+                <span class="author">{{this.author.username}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
